@@ -1,19 +1,19 @@
-package NestedRecursion;
+
 // P-4
 
 public class InvertedHalfPyramid {
-    
-    static void printStars(int stars){
-        if(stars == 0){
+
+    static void printStars(int stars) {
+        if (stars == 0) {
             return;
         }
-     
+
         System.out.print("* ");
         printStars(stars - 1);
     }
 
-    static void printLines(int rows ){
-        if(rows == 0){
+    static void printLines(int rows) {
+        if (rows == 0) {
             return;
         }
 
@@ -23,27 +23,29 @@ public class InvertedHalfPyramid {
     }
 
     // Stack Falling Approach
-    static void printStars_2(int stars){
-        if(stars == 0){
+    static void printStars_2(int stars) {
+        if (stars == 0) {
             return;
         }
 
         printStars_2(stars - 1);
         System.out.print("* ");
     }
-    static void printLines_2(int rows, int stars){
-        if(rows == 0){
+
+    static void printLines_2(int rows, int stars) {
+        if (rows == 0) {
             return;
         }
 
-        printLines_2(rows - 1 ,stars+1);
+        printLines_2(rows - 1, stars + 1);
         printStars_2(stars);
         System.out.println();
     }
+
     public static void main(String[] args) {
         printLines(5);
         System.out.println();
-        printLines_2(5,1);
+        printLines_2(5, 1);
     }
 
 }

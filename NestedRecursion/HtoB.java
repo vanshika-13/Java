@@ -6,8 +6,7 @@ public class HtoB {
 
 	// declaring the method to convert
 	// Hexadecimal to Binary
-	String hexToBinary(String hex)
-	{
+	String hexToBinary(String hex) {
 
 		// variable to store the converted
 		// Binary Sequence
@@ -18,8 +17,7 @@ public class HtoB {
 		hex = hex.toUpperCase();
 
 		// initializing the HashMap class
-		HashMap<Character, String> hashMap
-			= new HashMap<Character, String>();
+		HashMap<Character, String> hashMap = new HashMap<Character, String>();
 
 		// storing the key value pairs
 		hashMap.put('0', "0000");
@@ -71,16 +69,15 @@ public class HtoB {
 	}
 
 	// Driver Code
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 
 		// instantiating the class
-		GFG ob = new GFG();
-	
+		HtoB ob = new HtoB();
+
 		String hex = "deafa";
-	
+
 		System.out.println(hex.toUpperCase());
-	
+
 		// printing and calling the
 		// hexToBinary() function
 		System.out.println(ob.hexToBinary(hex));

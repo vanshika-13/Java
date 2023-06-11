@@ -1,9 +1,9 @@
-package NestedRecursion;
+
 // P- 17
 public class HollowDiamond {
-    
-    static void printStars(int stars){
-        if(stars == 0){
+
+    static void printStars(int stars) {
+        if (stars == 0) {
             return;
         }
 
@@ -11,8 +11,8 @@ public class HollowDiamond {
         printStars(stars - 1);
     }
 
-    static void printSpaces(int spaces){
-        if(spaces == 0){
+    static void printSpaces(int spaces) {
+        if (spaces == 0) {
             return;
         }
 
@@ -20,8 +20,8 @@ public class HollowDiamond {
         printSpaces(spaces - 1);
     }
 
-    static void printLines(int rows , int spaces){
-        if(rows == 0){
+    static void printLines(int rows, int spaces) {
+        if (rows == 0) {
             return;
         }
 
@@ -33,8 +33,8 @@ public class HollowDiamond {
         printLines(rows - 1, spaces + 1);
     }
 
-    static void printLowerLines(int rows , int spaces){
-        if(rows == 0){
+    static void printLowerLines(int rows, int spaces) {
+        if (rows == 0) {
             return;
         }
 
@@ -45,6 +45,7 @@ public class HollowDiamond {
         printStars(rows);
         System.out.println();
     }
+
     public static void main(String[] args) {
         printLines(5, 0);
         printLowerLines(5, 0);

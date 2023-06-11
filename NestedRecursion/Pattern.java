@@ -1,20 +1,19 @@
-package NestedRecursion;
 
- class Pattern {
-// P-1
+class Pattern {
+    // P-1
     // Stack Building Approach
-    static void printStar(int stars){
-        if(stars  == 0){
+    static void printStar(int stars) {
+        if (stars == 0) {
             return;
         }
-        
+
         printStar(stars - 1);
         System.out.print("* ");
         return;
     }
 
-    static void printLine(int rows, int stars){
-        if(rows == 0){
+    static void printLine(int rows, int stars) {
+        if (rows == 0) {
             return;
         }
 
@@ -24,8 +23,8 @@ package NestedRecursion;
     }
 
     // Stack Falling Approach
-    static void printStar_2(int stars){
-        if(stars == 0){
+    static void printStar_2(int stars) {
+        if (stars == 0) {
             return;
         }
 
@@ -33,8 +32,8 @@ package NestedRecursion;
         System.out.print("* ");
     }
 
-    static void printLines_2(int rows , int stars){
-        if(rows == 0){
+    static void printLines_2(int rows, int stars) {
+        if (rows == 0) {
             return;
         }
 
@@ -46,6 +45,6 @@ package NestedRecursion;
     public static void main(String[] args) {
         printLine(5, 5);
         System.out.println();
-        printLines_2(5,5);
+        printLines_2(5, 5);
     }
 }

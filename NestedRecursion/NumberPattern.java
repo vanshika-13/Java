@@ -1,17 +1,16 @@
-package NestedRecursion;
-// P20
+
 public class NumberPattern {
-           static void printLeftNums(int nums){
-        if(nums == 0){
+    static void printLeftNums(int nums) {
+        if (nums == 0) {
             return;
         }
 
         printLeftNums(nums - 1);
-        System.out.print(nums+" ");
+        System.out.print(nums + " ");
     }
 
-    static void printSpaces(int spaces){
-        if(spaces == 0){
+    static void printSpaces(int spaces) {
+        if (spaces == 0) {
             return;
         }
 
@@ -19,29 +18,30 @@ public class NumberPattern {
         printSpaces(spaces - 1);
     }
 
-    static void printRightNums(int nums){
-        if(nums == 0){
+    static void printRightNums(int nums) {
+        if (nums == 0) {
             return;
         }
 
-        System.out.print(nums+" ");
+        System.out.print(nums + " ");
         printRightNums(nums - 1);
     }
-    static void printLines(int lines , int spaces){
-        if(lines == 0){
+
+    static void printLines(int lines, int spaces) {
+        if (lines == 0) {
             return;
         }
 
-        printLines(lines - 1 , spaces + 1);
+        printLines(lines - 1, spaces + 1);
         printLeftNums(lines);
         printSpaces(spaces);
         printSpaces(spaces);
         printRightNums(lines);
         System.out.println();
-        
+
     }
 
     public static void main(String[] args) {
-        printLines(5 , 0);
+        printLines(5, 0);
     }
 }

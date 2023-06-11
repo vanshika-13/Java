@@ -1,21 +1,18 @@
-package NestedRecursion;
 
 // P-10
 
 public class DiagonalLinePattern {
-    static void printSpacesOrStars(int spaces){
-        if(spaces == 0){
+    static void printSpacesOrStars(int spaces) {
+        if (spaces == 0) {
             return;
         }
 
-
         System.out.print("  ");
-       printSpacesOrStars(spaces - 1);
+        printSpacesOrStars(spaces - 1);
     }
 
-
-    static void printLines(int rows){
-        if(rows == 0){
+    static void printLines(int rows) {
+        if (rows == 0) {
             return;
         }
 
@@ -26,18 +23,17 @@ public class DiagonalLinePattern {
     }
 
     // Stack Falling Approach
-        static void printSpacesOrStars_2(int spaces_2 ){
-        if(spaces_2 == 0){
+    static void printSpacesOrStars_2(int spaces_2) {
+        if (spaces_2 == 0) {
             return;
         }
-
 
         printSpacesOrStars_2(spaces_2 - 1);
         System.out.print("  ");
     }
 
-    static void printLines_2(int rows , int spaces_2){
-        if(rows == 0){
+    static void printLines_2(int rows, int spaces_2) {
+        if (rows == 0) {
             return;
         }
 
@@ -46,6 +42,7 @@ public class DiagonalLinePattern {
         System.out.print("* ");
         System.out.println();
     }
+
     public static void main(String[] args) {
         printLines(5);
         printLines_2(5, 0);

@@ -1,9 +1,8 @@
-package NestedRecursion;
-// P 18
+
 public class RightArrow {
-    
-       static void printStars(int stars){
-        if(stars == 0){
+
+    static void printStars(int stars) {
+        if (stars == 0) {
             return;
         }
 
@@ -11,8 +10,8 @@ public class RightArrow {
         printStars(stars - 1);
     }
 
-    static void printSpaces(int spaces){
-        if(spaces == 0){
+    static void printSpaces(int spaces) {
+        if (spaces == 0) {
             return;
         }
 
@@ -20,25 +19,25 @@ public class RightArrow {
         printSpaces(spaces - 1);
     }
 
-    static void printLines(int rows , int spaces){
-        if(rows == 0){
+    static void printLines(int rows, int spaces) {
+        if (rows == 0) {
             return;
         }
 
-        printSpaces( 2*spaces - 2);
+        printSpaces(2 * spaces - 2);
         printStars(rows);
         System.out.println();
-        printLines(rows - 1 , spaces + 1);
+        printLines(rows - 1, spaces + 1);
 
     }
 
-    static void printLowerLines(int rows , int spaces){
-        if(rows == 1){
+    static void printLowerLines(int rows, int spaces) {
+        if (rows == 1) {
             return;
         }
 
         printLowerLines(rows - 1, spaces + 1);
-        printSpaces(2*spaces - 2);
+        printSpaces(2 * spaces - 2);
         printStars(rows);
         System.out.println();
     }
