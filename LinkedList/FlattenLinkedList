@@ -1,0 +1,24 @@
+class flat{
+ Node flatten(Node root)
+    {
+     PriorityQueue<Integer> pq=new PriorityQueue<>();   
+    Node curr=root;
+    Node head=new Node(100);
+    Node temp=head;
+    while(curr!=null){
+       Node temp1=curr; 
+     while(temp1!=null){
+       pq.add(temp1.data);
+       temp1=temp1.bottom;
+     } 
+     curr=curr.next;
+    }
+    while(!pq.isEmpty()){
+        int data=pq.poll();
+       Node nn=new Node(data);
+       temp.bottom=nn;
+       temp=temp.bottom;
+    }
+    return head.bottom;
+    }
+}

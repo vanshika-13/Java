@@ -1,0 +1,65 @@
+class Solution{
+public void alternatingSplitList(Node head)
+    {
+      if(head==null||head.next==null)
+      {
+          GFG.a=head;
+          return;
+      }
+
+      Node p1=null,p2=null;
+
+      boolean flag=true;
+
+      while(head!=null)
+
+      {
+
+          if(flag==true)
+
+          {
+
+          if(GFG.a==null)
+
+          {
+
+              GFG.a=p1=head;
+
+              head=head.next;
+
+              p1.next=null;
+
+          }
+
+          else
+          {
+              p1.next=head;
+
+              p1=head;
+              head=head.next;
+              p1.next=null;
+          }
+
+          flag=false;
+
+          }
+          else
+          {
+              if(GFG.b==null)
+              {
+              GFG.b=p2=head;
+              head=head.next;
+              p2.next=null;
+              }
+              else
+              {
+              p2.next=head;
+              p2=head;
+              head=head.next;
+              p2.next=null;
+              }
+              flag=true;
+          }
+      }
+     }
+}
